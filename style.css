@@ -1,0 +1,110 @@
+ /*
+Angelia
+04-02-19
+Assignment 6
+CSCI 3300-W1
+Professor Jim
+q2 CSS for q2 HTML
+*/
+html 
+{
+    background-color: #536767;
+}
+body /*Full body*/
+{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    width: 710px;
+    margin: auto;
+    border: 1px solid black;
+    box-shadow: -1px 10px 18px 10px black;
+    background-color: #1C4343;
+    color: white;
+    border: 2px solid black;
+    height: 730px;
+}
+
+.body /*Body of everything below the h1 header*/
+{
+    padding: 15px 1.5em;
+    margin: 1px auto;
+    height: 266px;
+}
+#button
+{
+    margin-bottom: 1.5em;
+}
+
+h1 /*"Angelia's Kung Fu Panda Po Magic Rectangle" header*/
+{
+    color: white; 
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    font-size: 205%;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+h2 /*Page content headers*/
+{
+    font-size: 100%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#magic
+{
+    margin-bottom: -1.0em;
+}
+
+#main_header
+{
+    margin-bottom: 2em;
+}
+
+#row
+{
+    margin-bottom: 5px;
+    width: 5.2em;
+}
+
+#column
+{
+    margin-bottom: 1.5em;
+    width: 5em;
+}
+#pos_row /*Po's row header*/
+{
+    margin-bottom: -0.4em;
+}
+
+#pos_column /*Po's column header*/
+{
+    margin-bottom: 1.4em;
+}
+
+.wrapper /*Border formatting for h1 header*/
+{
+    border: 1px solid black;
+    margin-right: -.1em;
+    margin-left: -.05em; 
+    background-image: linear-gradient(45deg, silver, #215A57 75%, #A8C4C3);
+}
+
+#info /*ID for Po's Magic Rectangle header*/
+{
+    margin-bottom: -1.0em;
+    margin-top: 3em;
+}
+
+#row /*ID for row form*/
+{
+    margin-left: 2.3em;
+}
+
+#column /*ID for column form*/
+{
+    
+}
+
+

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!--
+Angelia
+04-02-19
+Assignment 6
+CSCI 3300-W1
+Professor Jim
+q2 HTML for q2 CSS
+-->
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Angelia's Kung Fu Panda Po Magic Rectangle</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <div class = "wrapper">
+            <h1>Angelia's Kung Fu Panda Po Magic Rectangle</h1>
+            </div>
+        </header>
+        <main>
+            <section class="body">
+                    <h2 id="main_header">Enter Po's row and column numbers.</h2>
+                    <!---->
+               <script> //Input and output for Generate Po's Magic Rectangle info
+                    function write_rectangle()
+                    {
+                        var pos_row = document.getElementById('rectangle');
+                        var row = document.getElementById('row');
+                        var first_ouput = document.getElementById('rectangle');
+                        var column = document.getElementById('column');
+                        first_ouput.innerHTML = "Po's magic rectangle has " + row.value + " rows, and " + column.value + " columns.";
+                        
+                        var tempRows = row.value;
+                        var tempColumns = column.value;
+                        var text;
+                        text = "Nested while loop rectangle <br>";
+                        document.getElementById("output").innerHTML = text;
+                        while(tempRows > 0)
+                        {  
+                            while(tempColumns > 0)
+                            {
+                                tempColumns -= 1;
+                                text = "(XY)";
+                                document.getElementById("output").innerHTML += text;  
+                            }
+                            tempRows -= 1;
+                            tempColumns = column.value;
+                            text = "<br>";
+                            document.getElementById("output").innerHTML += text;
+                        }
+                        
+                        tempRows = row.value;
+                        tempColumns = column.value;
+                        text = "Nested do..while loop rectangle <br>";
+                        document.getElementById("output2").innerHTML = text;
+                        do
+                        {
+                            do
+                            {
+                                tempColumns -= 1;
+                                text = "loc(r" + ((row.value - tempRows) + 1) + ",c" + (column.value - tempColumns) + "); ";
+                                document.getElementById("output2").innerHTML += text; 
+                            }
+                            while(tempColumns > 0)
+                        
+                            tempRows -= 1;
+                            tempColumns = column.value;
+                            text = "<br>";
+                            document.getElementById("output2").innerHTML += text;
+                        }
+                        while(tempRows > 0)
+                            
+                        tempRows = row.value;
+                        tempColumns = column.value;
+                        text = "Nested for loop rectangle <br>";
+                        document.getElementById("output3").innerHTML = text;
+                        
+                        for(var i = 0; i < tempRows; i++)
+                        {
+                            for(var j = 0; j < tempColumns; j++)
+                            {
+                                text = (i + 1) + "+" + (j + 1) + "=" + ((i + 1) + (j +1)) + "; ";
+                                document.getElementById("output3").innerHTML += text;
+                            }
+                            
+                            text = "<br>";
+                            document.getElementById("output3").innerHTML += text;
+                        }
+                    }
+                </script>
+                <form>
+                    Po's Row:<input type = "text" id = "row"/><br/>
+                    Po's Column: <input type = "text" id = "column"/><br/>
+                    <input type="button" id ="button" value="Generate Po's Magic Rectangle" onclick="write_rectangle();"/>
+
+                </form>   
+                <h2 id=magic>Po's Magic Rectangle</h2>
+                <h2 id="rectangle"></h2>
+                <h2 id="output"></h2>
+                <h2 id="output2"></h2>
+                <h2 id="output3"></h2>
+            </section>
+        </main>
+    </body>
+</html> 
